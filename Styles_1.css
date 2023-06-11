@@ -1,0 +1,273 @@
+
+/* En este archivo escriban su CSS */
+
+/* Fonts */
+/* Importar aquí la font */
+
+
+*{ 
+    font-family: 'Outfit', sans-serif;
+
+}
+
+/* Aquí les dejamos como ayuda este "reset" en el cual ajustamos algunas propiedades
+*  cuyos valores asigna por defecto el navegador.
+*/
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* Para que el scrolleo en la one page sea suave */
+    scroll-behavior: smooth;
+}
+
+/* Para quitar los puntos a los items de listas */
+ul {
+    list-style: none;
+}
+
+/* Para que los enlaces hereden el color de texto y no tengan subrayado */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Este max-width es para que el contenido no se "estire" demasiado hacia los costados y
+*  el margin: auto; para tenerlo centrado fácilmente ;)
+*/
+main {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Recomendaciones! 
+*  - Comenzar desde lo más general y luego ir hacia lo mas específico, asignando primero
+*    "estilos generales". Una buena idea sería comenzar por el <body> ;)
+*
+*  - Recuerden que queremos evitar "repetir código", en CSS usando la cualidad de la herencia
+*    podemos setear ciertas propiedades en un elemento padre y dejar que sean heredadas (por ejemplo: font-size)
+*
+*  - Nadie sabe todas las propiedades CSS de memoria, si no saben como hacer algo no lo recuerdan, la respuesta
+*    pueden encontrarla buscando en la web algo como "CSS como hacer ... " o "propiedad css para hacer ..."
+*
+*  - Usen mucho las herramientas para desarrolladores del navegador para ir
+*    probando el CSS que escriben, resolver dudas y problemas.
+*
+*  - Paciencia, resiliencia y creatividad! No se desanimen, las primeras experiencias maquetando con HTML y CSS
+*    pueden ser frustrantes, pero estas habilidades se van desarrollando con la experiencia, es como aprender
+*    un trabajo manual, hacer una artesanía, tocar un instrumento musical... la práctica es todo!
+*/
+
+
+
+/* Variables */
+
+:root{
+    --brandcolor: #7c66c3;
+    --textcolor: #241850;
+    --titulo_1: 36px;
+    --titulo_2: 28px;
+    --parrafo: 18px;
+}
+
+/* Codigo Desiree */
+
+/* Nav_Bar */
+
+.nav_bar{
+    background-color: #ffffff;
+    box-shadow: 0px 2px 10px rgb(100, 100, 100);
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    padding: 10px;
+}
+.container_links {
+    display:flex;
+    align-items: center;
+}
+
+.nav_links{
+    font-size: 18px;
+    padding: 20px;
+}
+
+/* Boton Interactivo */
+
+.nav_links:hover{ background-color: #8b81aa;
+color:#ffffff;
+transition: background-color 0.3s ;
+
+}
+
+/* Seccion de Foto */
+.perfil{
+    margin-top: 24px;
+    max-height: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.foto_Perfil{
+    max-width: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+.foto{
+    border-radius: 100%;
+}
+
+/* Seccion de Biografia */
+
+.bio {
+    display: block;
+    margin: auto;
+    margin-top: 24px;
+    text-align: center;
+    max-width: 60%;
+
+}
+
+.titulo_1 {
+    font-size: var(--titulo_1);
+    line-height: 1.2;
+    padding-bottom: 20px;
+    color:var(--textcolor);
+ 
+}
+.parrafo {
+    font-size: var(--parrafo);
+    line-height: 1.2;
+    color:var(--textcolor);
+}
+
+/* CV Boton */
+
+.cv_container {
+    padding-top: 23px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px; 
+}
+
+.dw_boton {
+    
+    background-color:var(--brandcolor);
+    width: 180px;
+    height: 50px;
+    border-radius: 100px;
+    color: white;
+    border: 0px solid transparent;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 10px; 
+}
+/* Boton Interactivo */
+
+.dw_boton:hover {
+    
+    background-color: rgb(214, 34, 184); 
+    transition: background-color 0.3s ;
+    transform: scale(1.1);
+
+
+}
+
+
+/* Contacto */
+
+.contacto {
+    text-align: center;
+    padding-top: 20px;
+}
+.contenedor_texto {
+    background-color: rgba(76, 163, 201, 0.3);
+    width: 300px;
+    height: 150px;
+    border-radius: 20px;
+    display: block;
+    margin:auto;
+    padding: 10px;
+}
+.titulo_2 {
+    font-size: var(--titulo_2);
+    color:var(--textcolor);
+}
+
+.rrss_container {
+    display: flex;
+    justify-content: center;
+    padding-top: 18px;
+}
+
+.rrss_icon {
+    padding: 10px;
+}
+
+
+/* footer */
+
+footer{
+    background-color:var(--brandcolor);
+    text-align: center;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.derechos{
+    font-size: 15px;
+    color: #ffffff;
+}
+ 
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Responsive */
+
+  /* Estilos para dispositivos móviles */
+  @media (max-width: 767px) {
+    .container {
+      padding: 10px;
+    }
+    
+    .foto_Perfil {
+      max-width: 100%;
+    }
+    
+    .bio {
+      max-width: 100%;
+    }
+  }
+  
+  /* Estilos para tabletas */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+      padding: 20px;
+    }
+  }
+  
+  /* Estilos para pantallas más grandes */
+  @media (min-width: 1024px) {
+    .container {
+      padding: 30px;
+    }
+  }
+  
+
+  
